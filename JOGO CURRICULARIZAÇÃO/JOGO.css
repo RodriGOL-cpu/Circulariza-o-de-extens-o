@@ -1,0 +1,633 @@
+/*
+#############################################################################################################################################
+                                                         BASE DO SITE
+#############################################################################################################################################
+*/
+
+/*
+######################
+    PAGINA INTEIRA
+######################
+*/
+* {
+    box-sizing: border-box;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    cursor: default;
+
+    touch-action: manipulation;
+}
+
+/*
+####################
+    BASE DO JOGO
+####################
+*/
+.JOGO {
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                        TRANSIÇÃO PARA O JOGO
+#############################################################################################################################################
+*/
+
+/*
+#################################
+    TRANISIÇÃO CIRCULO CRESCE
+#################################
+*/
+#TRANSICAO {
+    background-color: black;
+    width: 300vw;
+    height: 300vw;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 999;
+
+    pointer-events: none;
+
+    transition: width 0.5s ease-out, height 0.5s ease-out;
+}
+
+#TRANSICAO.ABRIR {
+    width: 0;
+    height: 0;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         CENA DO JOGO
+#############################################################################################################################################
+*/
+
+/*
+#####################
+    FUNDO DO JOGO
+#####################
+*/
+.JOGO-FUNDO {
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(IMAGENS/JOGO.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 2vw;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         PAINEL E PERGUNTAS
+#############################################################################################################################################
+*/
+
+/*
+###########################
+    PAINEL DE PERGUNTAS
+###########################
+*/
+.JOGO-PAINEL-PERGUNTAS {
+    background-color: rgba(93, 116, 138, 0.800);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    width: 65vw;
+    height: 80vh;
+
+    border: 1px solid black;
+
+    border-radius: 5vh;
+
+    margin-top: 4vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*
+#################################################
+    LOCAL ONDE VAI FICAR A DIFCULDADE E O TEMA
+#################################################
+*/
+
+/*
+################################
+    DIFCULDADE DAS PERGUNTAS
+################################
+*/
+#JOGO-LOCAL-DIFICULDADE {
+    background-color: rgba(12, 36, 58, 0.8);
+    color: white;
+    width: 20vw;
+    height: 5vh;
+
+    border-radius: 0 0 100vh 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial;
+}
+
+
+/*
+################################
+    TEMA DAS PERGUNTAS
+################################
+*/
+#JOGO-LOCAL-TEMA {
+    background-color: rgba(12, 36, 58, 0.8);
+    color: white;
+    width: 22vw;
+    height: 5vh;
+
+    border-radius: 20vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+
+    font-family: Arial;
+}
+
+
+/*
+###########################
+    LOCAL DAS PERGUNTAS
+###########################
+*/
+#JOGO-LOCAL-PERGUNTAS {
+    color: white;
+    width: 64vw;
+    height: 5vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 2.5vh;
+    font-family: Arial;
+}
+
+
+/*
+#################################
+    LOCAL DAS IMAGENS/DESAFIO
+#################################
+*/
+.JOGO-LOCAL-IMAGEM {
+    background-color: rgb(138, 67, 104);
+    width: 64vw;
+    height: 58vh;
+
+    border-radius: 0 0 5vh 5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 2vh;
+}
+
+
+/*
+#################################
+    IMAGEM/DESAFIO
+#################################
+*/
+#JOGO-IMAGEM-OU-DESAFIO {
+    width: 60vw;
+    height: 50vh;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         PAINEL DE RESPOSTAS
+#############################################################################################################################################
+*/
+
+/*
+###########################
+    PAINEL DE RESPOSTAS
+###########################
+*/
+.JOGO-PAINEL-RESPOSTAS {
+    background-color: rgba(93, 116, 138, 0.800);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    width: 25vw;
+    height: 80vh;
+
+    margin-top: 4vh;
+
+    border: 1px solid black;
+
+    border-radius: 5vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 5vh;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                    TITULO DO PAINEL DE RESPOSTAS
+#############################################################################################################################################
+*/
+
+/*
+########################
+    TITULO DO PAINEL
+########################
+*/
+.JOGO-TITULO-PAINEL-RESPOSTAS {
+    background-color: black;
+    color: white;
+    width: 10vw;
+    height: 6vh;
+
+    border-radius: 2vh;
+
+    position: absolute;
+    top: -3vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                                RESPOSTAS
+#############################################################################################################################################
+*/
+
+/*
+##############################
+    BOTÃO COM AS RESPOSTAS
+##############################
+*/
+.LOCAL-RESPOSTA-A,
+.LOCAL-RESPOSTA-B,
+.LOCAL-RESPOSTA-C,
+.LOCAL-RESPOSTA-D {
+    background-color: transparent;
+    width: 24vw;
+    height: 14vh;
+
+    border: none;
+    box-shadow: 5px 5px 10px black;
+ 
+    border-radius: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    
+    transition: 0.2s;
+}
+
+/*
+#########################################
+    BOTÃO COM AS RESPOSTAS COM :HOVER
+#########################################
+*/
+.LOCAL-RESPOSTA-A:hover,
+.LOCAL-RESPOSTA-B:hover,
+.LOCAL-RESPOSTA-C:hover,
+.LOCAL-RESPOSTA-D:hover {
+    transform: scale(0.98);
+}
+
+/*
+##########################################
+    BOTÃO COM AS RESPOSTAS COM :ACTIVE
+##########################################
+*/
+.LOCAL-RESPOSTA-A:active,
+.LOCAL-RESPOSTA-B:active,
+.LOCAL-RESPOSTA-C:active,
+.LOCAL-RESPOSTA-D:active {
+    transform: scale(0.95);
+    filter: brightness(0.7);
+}
+
+/*
+################################
+    RESPOSTA DENTRO DO BOTÃO
+################################
+*/
+#RESPOSTA-A,
+#RESPOSTA-B,
+#RESPOSTA-C,
+#RESPOSTA-D {
+    background-color: transparent;
+    color: white;
+    width: 24vw;
+    height: 14vh;
+
+    border: none;
+    border-radius: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 3vh;
+    font-weight: bold;
+    
+    flex-shrink: 0;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                    PAINEL DOS BOTÕES DE PARAR E CONTINUAR
+#############################################################################################################################################
+*/
+
+/*
+###########################################
+    PAINEL BOTÕES DE PARAR E CONTINUAR
+###########################################
+*/
+.JOGO-PAINEL-BOTOES-FUNCAO {
+    width: 100vw;
+    height: 10vh;
+
+    position: absolute;
+    top: 88vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 0.5vw;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                             BOTÃO DE PARAR
+#############################################################################################################################################
+*/
+
+/*
+###################
+    BOTÃO PARAR
+###################
+*/
+#JOGO-BOTAO-PARAR {
+    background-color: red;
+    width: 5vw;
+    height: 10vh;
+
+    border: none;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 100vh;
+
+    transition: 0.2s;
+}
+
+/*
+#############################
+    BOTÃO PARAR COM HOVER
+#############################
+*/
+#JOGO-BOTAO-PARAR:hover {
+    transform: scale(0.95);
+}
+
+/*
+#############################
+    BOTÃO PARAR COM ACTIVE
+#############################
+*/
+#JOGO-BOTAO-PARAR:active {
+    transform: scale(0.90);
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                             BOTÃO DE CONTINUAR
+#############################################################################################################################################
+*/
+
+/*
+#######################
+    BOTÃO CONTINUAR
+#######################
+*/
+#JOGO-BOTAO-CONTINUAR {
+    background-color: red;
+    width: 5vw;
+    height: 10vh;
+
+    border: none;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 100vh;
+
+    transition: 0.2s;
+}
+
+/*
+#################################
+    BOTÃO CONTINUAR COM HOVER
+#################################
+*/
+#JOGO-BOTAO-CONTINUAR:hover {
+    transform: scale(0.95);
+}
+
+/*
+##################################
+    BOTÃO CONTINUAR COM ACTIVE
+##################################
+*/
+#JOGO-BOTAO-CONTINUAR:active {
+    transform: scale(0.90);
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         RESULTADO DO JOGO
+#############################################################################################################################################
+*/
+
+/*
+#################
+    RESULTADO
+#################
+*/
+#JOGO-RESULTADO {
+    display: none;
+
+    background-color: rgba(101, 100, 100, 0.50);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: (12px);
+    width: 40vw;
+    height: 80vh;
+
+    border: 2px solid rgba(101, 100, 100, 0.80);
+    border-radius: 5vh;
+
+    position: absolute;
+    top: 10vh;
+    left: 30vw;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999;
+}
+#JOGO-RESULTADO h1,
+#JOGO-RESULTADO h2 {
+    color: white;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                    JOGO BLUR DEPOIS DO RESULTADO
+#############################################################################################################################################
+*/
+
+/*
+############
+    BLUR
+############
+*/
+#JOGO-BLUR {
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.60);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 998;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                    TRANSIÇÃO ENTRE PERGUNTAS
+#############################################################################################################################################
+*/
+
+/*
+#################################
+    TRANSIÇÃO ENTRE PERGUNTAS
+#################################
+*/
+.JOGO-PAINEL-PERGUNTAS {
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.JOGO-PAINEL-PERGUNTAS.SAINDO {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.JOGO-PAINEL-PERGUNTAS.ENTRANDO {
+    transform: translateX(100%);
+    opacity: 0;
+}

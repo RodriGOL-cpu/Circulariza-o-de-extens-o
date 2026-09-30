@@ -1,0 +1,266 @@
+/*
+#############################################################################################################################################
+                                                         BASE DO SITE
+#############################################################################################################################################
+*/
+
+/*
+######################
+    PAGINA INTEIRA
+######################
+*/
+* {
+    box-sizing: border-box;
+
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+
+    overflow: hidden;
+
+    cursor: default;
+
+    touch-action: manipulation;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         MENU PRINCIPAL
+#############################################################################################################################################
+*/
+
+/*
+####################
+    BASE DO MENU
+####################
+*/
+#MENU {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+#####################
+    FUNDO DO MENU
+#####################
+*/
+.MENU-FUNDO {
+    background-color: blueviolet;
+    width: 100vw;
+    height: 100vh;
+
+    background-image: url(IMAGENS/MENU.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+####################
+    TÍTULO DO MENU
+####################
+*/
+.MENU-TITULO {
+    width: 30vw;
+    height: 20vh;
+
+    background-image: url(IMAGENS/TITULO.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    margin-bottom: 10vh;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         PAINEL DE BOTÕES
+#############################################################################################################################################
+*/
+
+/*
+#############################
+    PAINEL BOTÕES DO MENU
+#############################
+*/
+.MENU-PAINEL-BOTOES {
+    width: 25vw;
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         BOTÃO JOGAR
+#############################################################################################################################################
+*/
+
+/*
+###########################
+    BOTÃO JOGAR DO MENU
+###########################
+*/
+.MENU-BOTAO-JOGAR {
+    background-color: rgba(226, 43, 43, 0);
+    width: 15vw;
+    height: 10vh;
+
+    background-image: url(IMAGENS/JOGAR.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    margin-bottom: 5vh;
+
+    border: none;
+    border-radius: 30vh;
+
+    transition: 0.2s;
+}
+
+
+/*
+#####################################
+    BOTÃO JOGAR DO MENU COM HOVER
+#####################################
+*/
+.MENU-BOTAO-JOGAR:hover {
+    transform: scale(0.95);
+}
+
+
+/*
+#####################################
+    BOTÃO JOGAR DO MENU COM HOVER
+#####################################
+*/
+.MENU-BOTAO-JOGAR:active {
+    transform: scale(0.90);
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                         BOTÃO OPÇÕES
+#############################################################################################################################################
+*/
+
+/*
+############################
+    BOTÃO OPÇÕES DO MENU
+############################
+*/
+.MENU-BOTAO-OPCOES {
+    background-color: rgba(226, 43, 43, 0);
+    width: 15vw;
+    height: 10vh;
+
+    background-image: url(IMAGENS/OPÇÕES.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    border: none;
+    border-radius: 30vh;
+
+    transition: 0.2s;
+}
+
+
+/*
+######################################
+    BOTÃO OPÇÕES DO MENU COM HOVER
+######################################
+*/
+.MENU-BOTAO-OPCOES:hover {
+    transform: scale(0.95);
+}
+
+
+/*
+######################################
+    BOTÃO OPÇÕES DO MENU ACTIVE
+######################################
+*/
+.MENU-BOTAO-OPCOES:active {
+    transform: scale(0.90);
+}
+
+
+
+
+
+/*
+#############################################################################################################################################
+                                                        TRANSIÇÃO PARA O JOGO
+#############################################################################################################################################
+*/
+
+/*
+#################################
+    TRANISIÇÃO CIRCULO CRESCE
+#################################
+*/
+#TRANSICAO {
+    background-color: black;
+    width: 0;
+    height: 0;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+    
+    z-index: 999;
+
+    transition: width 0.4s ease-in, height 0.4s ease-in;
+}
+
+#TRANSICAO.FECHAR {
+    width: 300vw;
+    height: 300vw;
+
+    transition: width 0.5s ease-in, height 0,5s ease-in;
+}
